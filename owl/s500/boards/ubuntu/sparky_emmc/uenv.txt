@@ -1,0 +1,2 @@
+uenvcmd=setenv os_type ubuntu;
+bootargs=earlyprintk clk_ignore_unused selinux=0 root=/dev/mmcblk0p2 console=tty0 real_rootflags=rw

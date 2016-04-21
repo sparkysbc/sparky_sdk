@@ -1,0 +1,6 @@
+ARCH=arm
+KERNEL_DTS=actduino_sparky_linux
+KERNEL_DEFCONFIG=actduino_sparky_linux_defconfig
+UBOOT_DEFCONFIG=actduino_s500_v12_defconfig
+
+MISC_IMAGE_SIZE=48
