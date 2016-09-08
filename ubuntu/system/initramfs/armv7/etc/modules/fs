@@ -1,0 +1,10 @@
+ext2
+ext3
+ext4
+btrfs
+reiserfs
+jfs
+nfs
+xfs
+zfs
+fuse

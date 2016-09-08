@@ -1,0 +1,6 @@
+sdkdir=/home/local/ACTIONS/hexibin/sgx-3625561-build/eurasia/eurasiacon/binary2_omap_linux_release/target/usr/local/XSGX/include/xorg
+
+Name: xorg-mouse
+Description: X.Org mouse input driver for non-evdev OS'es
+Version: 1.9.0
+Cflags: -I${sdkdir}

@@ -1,0 +1,71 @@
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides:     actions  drivers
+# Required-Start:
+# Required-Stop:
+# Default-Start:  2 3 4 5
+# Default-Stop:
+# Short-Description: set CPUFreq kernel parameters
+# Description: utilities to deal with CPUFreq Linux 
+#	kernel support
+### END INIT INFO
+# 
+
+DESC="Load Moduels Utilities"
+
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+CPUFREQ_SET=/usr/bin/cpufreq-set
+CPUFREQ_INFO=/usr/bin/cpufreq-info
+CPUFREQ_OPTIONS=""
+
+load_modules() {
+
+#F="
+#ethernet
+#"
+
+# for display
+#for i in $F; do
+#        modprobe ${i}
+#done
+
+USB_F="
+USB_B_OUT
+USB_A_IN
+"
+
+chmod 0777 /dev/android_adb
+
+echo 0 > /sys/class/android_usb/android0/enable
+echo 10d6 > /sys/class/android_usb/android0/idVendor
+echo 0c02 > /sys/class/android_usb/android0/idProduct
+echo "mass_storage,adb" > /sys/class/android_usb/android0/functions
+echo /dev/actj > /sys/class/android_usb/android0/f_mass_storage/lun0/file
+echo 1 > /sys/class/android_usb/android0/enable
+
+adbd &
+
+echo 1 > /sys/monitor/usb_port/config/run
+
+for i in $USB_F; do
+        echo $i > /sys/monitor/usb_port/config/usb_con_msg
+        sleep 0.3
+done
+
+#echo 1 > /proc/sys/kernel/printk
+#echo 0xb01b0020=0x0033c000 > /sys/kernel/debug/owl/reg
+}
+
+case "$1" in
+	start|restart|reload)
+		load_modules
+		;;
+	stop)
+		;;
+	*)
+		echo "Usage: $0 {start|stop|restart}"
+		exit 1
+esac
+
+exit 0
+

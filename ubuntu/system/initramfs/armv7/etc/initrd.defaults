@@ -1,0 +1,90 @@
+#!/bin/ash
+
+PATH="/usr/sbin:/usr/bin:/sbin:/bin"
+
+# Insert ctrl character
+# ctrl-V then esc will print ^[
+# ctrl-V then ctrl-shift-m will print ^M
+BACK_UP="\033[1K\033[0G"
+NORMAL="\033[0m"
+WARN="\033[33;1m"
+BAD="\033[31;1m"
+BOLD="\033[1m"
+GOOD="\033[32;1m"
+
+# From KNOPPIX LINUXRC
+# Reset fb color mode
+RESET="]R"
+# ANSI COLORS
+# Erase to end of line
+CRE="
+[K"
+# Clear and reset Screen
+CLEAR="c"
+# Normal color
+NORMAL="[0;39m"
+# RED: Failure or error message
+RED="[1;31m"
+# GREEN: Success message
+GREEN="[1;32m"
+# YELLOW: Descriptions
+YELLOW="[1;33m"
+# BLUE: System mesages
+BLUE="[1;34m"
+# MAGENTA: Found devices or drivers
+MAGENTA="[1;35m"
+# CYAN: Questions
+CYAN="[1;36m"
+# BOLD WHITE: Hint
+WHITE="[1;37m"
+
+# Clear screen with colormode reset
+# echo "$CLEAR$RESET"
+# echo "$CLEAR"
+# Just go to the top of the screen
+# echo -n "[H[J"
+
+KV=$(uname -r)
+KMAJOR=$(echo $KV | cut -f1 -d.)
+KMINOR=$(echo $KV | cut -f2 -d.)
+KVER="${KMAJOR}.${KMINOR}"
+MISCOPTS="debug detect"
+
+ROOT_LINKS="bin sbin lib lib32 lib64 boot usr opt emul"
+ROOT_TREES="etc root home var"
+KSUFF=".ko"
+
+# systemd-207 dropped /sbin/udevd
+UDEVD="/sbin/udevd"
+[ ! -e "${UDEVD}" ] && UDEVD="/usr/lib/systemd/systemd-udevd"
+[ ! -e "${UDEVD}" ] && UDEVD="/lib/systemd/systemd-udevd"
+
+MDEVD="/sbin/mdev"
+INITRD_SPLASH="/etc/initrd.splash"
+# latest plymouth ebuild in gentoo has it in /usr/bin
+PLYMOUTHD_BIN="/sbin/plymouthd"
+[ ! -e "${PLYMOUTHD_BIN}" ] && PLYMOUTHD_BIN="/usr/sbin/plymouthd"
+
+PLYMOUTH_BIN="/bin/plymouth"
+[ ! -e "${PLYMOUTH_BIN}" ] && PLYMOUTH_BIN="/usr/bin/plymouth"
+
+REAL_ROOT=""
+CONSOLE="/dev/console"
+NEW_ROOT="/newroot"
+CDROOT="0"
+CDROOT_DEV=""
+CDROOT_TYPE="auto"
+CDROOT_PATH="/mnt/cdrom"
+# This is the file that the cdroot will be checked for as a
+# marker. It must exist RELATIVE to the cdroot.
+CDROOT_MARKER="/livecd"
+
+LOOPS="/livecd.loop /zisofs /livecd.squashfs /image.squashfs /livecd.gcloop"
+
+DEFAULT_NFSOPTIONS="ro,nolock,rsize=1024,wsize=1024"
+
+# Only sections that are in by default or those that
+# are not module groups need to be defined here...
+HWOPTS="keymap cache modules pata sata scsi usb firewire waitscan lvm dmraid mdadm fs net virtio hyperv nand"
+MY_HWOPTS="modules pata sata scsi usb firewire waitscan dmraid mdadm fs net iscsi crypto plymouth virtio nand"
+HWOPTS="$HWOPTS ataraid crypt crypto dmraid firewire fs hyperv iscsi lvm mdadm multipath net pata pcmcia sata scsi usb virtio waitscan nand "

@@ -1,0 +1,7 @@
+# of module          name                 type                 compatible
+ethernet             *                    *                    actions,owl-ethernet
+atc260x-irkeypad     *                    *                    actions,atc2603a-irkeypad
+atc260x-irkeypad     *                    *                    actions,atc2603c-irkeypad
+atc260x-irkeypad     *                    *                    actions,atc2609a-irkeypad
+owl_camera           *                    *                    actions,owl-isp
+pvrsrvkm             *                    *                    actions,atm7039c-gpu

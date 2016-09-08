@@ -1,0 +1,16 @@
+#!/bin/sh
+
+. /etc/initrd.defaults
+. /etc/initrd.d/00-splash.sh
+. /etc/initrd.d/00-common.sh
+. /etc/initrd.d/00-fsdev.sh
+. /etc/initrd.d/00-devmgr.sh
+. /etc/initrd.d/00-zfs.sh
+. /etc/initrd.d/00-modules.sh
+. /etc/initrd.d/00-livecd.sh
+. /etc/initrd.d/00-nfs.sh
+. /etc/initrd.d/00-keymaps.sh
+. /etc/initrd.d/00-crypt.sh
+. /etc/initrd.d/00-suspend.sh
+. /etc/initrd.d/00-iscsi.sh
+. /etc/initrd.d/00-rootdev.sh

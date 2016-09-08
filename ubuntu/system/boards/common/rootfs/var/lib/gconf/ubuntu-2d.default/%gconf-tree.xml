@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="apps">
+		<dir name="metacity">
+			<dir name="general">
+				<entry name="capture_before_unmap" mtime="1335183251" type="bool" value="true"/>
+				<entry name="compositing_manager" mtime="1335183251" type="bool" value="false"/>
+				<entry name="show_maximized_titlebars" mtime="1335183251" type="bool" value="false"/>
+				<entry name="auto_maximize_windows" mtime="1335183251" type="bool" value="true"/>
+				<entry name="compositor_effects" mtime="1335183251" type="bool" value="false"/>
+			</dir>
+		</dir>
+		<dir name="compiz-1">
+			<dir name="plugins">
+				<dir name="unityshell">
+					<dir name="screen0">
+						<dir name="options">
+							<entry name="show_hud" mtime="1335183251" type="string">
+								<stringvalue>&lt;Alt&gt;</stringvalue>
+							</entry>
+						</dir>
+					</dir>
+				</dir>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

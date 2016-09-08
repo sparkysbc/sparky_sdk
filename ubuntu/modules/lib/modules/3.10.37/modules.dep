@@ -1,0 +1,51 @@
+kernel/drivers/net/ethernet/acts/ethernet.ko:
+kernel/drivers/net/wireless/actions/bcmdhd/bcmdhd_prealloc.ko:
+kernel/drivers/net/wireless/actions/bcmdhd/wlan_bcmdhd.ko: kernel/drivers/net/wireless/actions/bcmdhd/bcmdhd_prealloc.ko
+kernel/drivers/net/wireless/actions/rtl8188etv/wlan_8188etv.ko:
+kernel/drivers/net/wireless/actions/rtl8723bs/wlan_8723bs.ko:
+kernel/drivers/net/wireless/actions/rtl8723bs_vq0/wlan_8723bs_vq0.ko:
+kernel/drivers/net/wireless/actions/rtl8723bu/wlan_8723bu.ko:
+kernel/drivers/input/keyboard/atc260x-adckeypad.ko:
+kernel/drivers/input/keyboard/atc260x-irkeypad.ko:
+kernel/drivers/input/touchscreen/GSL2681_M2111/ctp_gslX680.ko:
+kernel/drivers/input/touchscreen/GSL3680/ctp_gsl3680.ko:
+kernel/drivers/input/touchscreen/FT5406/ctp_ft5x06.ko:
+kernel/drivers/input/touchscreen/ctp_detect/ctp_detect.ko:
+kernel/drivers/input/misc/gsensor/gsensor_bma222.ko:
+kernel/drivers/input/misc/gsensor/gsensor_mc3232.ko:
+kernel/drivers/input/misc/gsensor/gsensor_mc3236.ko:
+kernel/drivers/input/misc/gsensor/kionix/gsensor_kionix.ko:
+kernel/drivers/input/misc/gsensor/stk8313/gsensor_stk8313.ko:
+kernel/drivers/input/misc/gsensor/mir3da/gsensor_mir3da.ko:
+kernel/drivers/input/misc/gsensor/gsensor_detect.ko:
+kernel/drivers/input/lightsensor/lightsensor_ltr301.ko:
+kernel/drivers/i2c/algos/i2c-algo-bit.ko:
+kernel/drivers/media/i2c/camera/owl_camera/owl_camera.ko:
+kernel/drivers/media/i2c/camera/gc2035/gc2035.ko: kernel/drivers/media/i2c/camera/flashlight/flashlight.ko
+kernel/drivers/media/i2c/camera/gc0308/gc0308.ko: kernel/drivers/media/i2c/camera/flashlight/flashlight.ko
+kernel/drivers/media/i2c/camera/gc2155/gc2155.ko: kernel/drivers/media/i2c/camera/flashlight/flashlight.ko
+kernel/drivers/media/i2c/camera/gc0312/gc0312.ko: kernel/drivers/media/i2c/camera/flashlight/flashlight.ko
+kernel/drivers/media/i2c/camera/gc2145/gc2145.ko: kernel/drivers/media/i2c/camera/flashlight/flashlight.ko
+kernel/drivers/media/i2c/camera/gc0328/gc0328.ko: kernel/drivers/media/i2c/camera/flashlight/flashlight.ko
+kernel/drivers/media/i2c/camera/gc0329/gc0329.ko: kernel/drivers/media/i2c/camera/flashlight/flashlight.ko
+kernel/drivers/media/i2c/camera/sp0a19/sp0a19.ko: kernel/drivers/media/i2c/camera/flashlight/flashlight.ko
+kernel/drivers/media/i2c/camera/hi257/hi257.ko: kernel/drivers/media/i2c/camera/flashlight/flashlight.ko
+kernel/drivers/media/i2c/camera/hi708/hi708.ko: kernel/drivers/media/i2c/camera/flashlight/flashlight.ko
+kernel/drivers/media/i2c/camera/ov5640/ov5640.ko: kernel/drivers/media/i2c/camera/flashlight/flashlight.ko
+kernel/drivers/media/i2c/camera/ov2686/ov2686.ko: kernel/drivers/media/i2c/camera/flashlight/flashlight.ko
+kernel/drivers/media/i2c/camera/soc5140/soc5140.ko: kernel/drivers/media/i2c/camera/flashlight/flashlight.ko
+kernel/drivers/media/i2c/camera/sp2519/sp2519.ko: kernel/drivers/media/i2c/camera/flashlight/flashlight.ko
+kernel/drivers/media/i2c/camera/sp0718/sp0718.ko: kernel/drivers/media/i2c/camera/flashlight/flashlight.ko
+kernel/drivers/media/i2c/camera/siv121du/siv121du.ko: kernel/drivers/media/i2c/camera/flashlight/flashlight.ko
+kernel/drivers/media/i2c/camera/flashlight/flashlight.ko:
+kernel/drivers/media/i2c/camera/sensor_detect/sensor_detect.ko:
+kernel/drivers/media/v4l2-core/videobuf2-vmalloc.ko:
+kernel/drivers/media/usb/uvc/uvcvideo.ko: kernel/drivers/media/v4l2-core/videobuf2-vmalloc.ko
+kernel/drivers/media/usb/gspca/gspca_main.ko:
+kernel/drivers/iio/gyro/inv_mpu6515/gyrosensor_inv_mpu6515_iio.ko:
+kernel/drivers/gpu/drm/drm.ko:
+kernel/drivers/gpu/pvr/eurasia_km_linux/pvrsrvkm.ko: kernel/drivers/gpu/drm/drm.ko
+kernel/drivers/gpu/pvr/eurasia_km_linux/bc_example.ko: kernel/drivers/gpu/pvr/eurasia_km_linux/pvrsrvkm.ko kernel/drivers/gpu/drm/drm.ko
+kernel/net/rfkill/rfkill-actions_bcmdhd.ko:
+kernel/net/rfkill/rfkill-actions_8723bs_vq0.ko:
+kernel/net/rfkill/rfkill-actions_8723bs.ko:

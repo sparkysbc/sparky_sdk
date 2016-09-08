@@ -1,0 +1,4 @@
+# usb module         match_flags idVendor idProduct bcdDevice_lo bcdDevice_hi bDeviceClass bDeviceSubClass bDeviceProtocol bInterfaceClass bInterfaceSubClass bInterfaceProtocol driver_info
+wlan_8188etv         0x0003      0x0bda   0x8179    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00               0x0
+wlan_8723bu          0x0383      0x0bda   0xb720    0x0000       0x0000       0x00         0x00            0x00            0xff            0xff               0xff               0x0
+uvcvideo             0x0383      0x0416   0xa91a    0x0000       0x0000       0x00         0x00            0x00            0x0e            0x01               0x00               0x0
