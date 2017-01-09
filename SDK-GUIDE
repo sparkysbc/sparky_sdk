@@ -1,5 +1,4 @@
 # sparky_sdk
-<<<<<<< HEAD
 
 Sparky SBC SDK Guide:
 To prepare SPARKY image build setup follow the steps of Sparky Ubuntu building environment steps, Then download SDK files from sparky website or sparkysbc git hub.
@@ -60,9 +59,8 @@ On successful build owl/out/board_os/images folder contains final images.
 Example:
 root@ubuntu:/opt/sparkysbc_sdk# cd owl/out/sparky_sd_ubuntu/images
 
-
+note : can run ./config , make kernel , make bootloader make u-boot , make rootfs ,make modules , make kernel-config under owl folder for specific module build.
 
 =======
 This is for building linux sparky image.
 sdk folder contains , kernel (3.10.37) ,owl ,u-boot ,toolchain
->>>>>>> 81df3d0cd0fc823b4b11fad799c873c1641fc4a7
